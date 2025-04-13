@@ -35,10 +35,12 @@ This project demonstrates the implementation of Retrieval Augmented Generation (
 2. ### Pull the Mistral Model
    ```bash
    ollama pull mistral
+   
    Note: If you skip this step, the application will automatically pull the model when it first starts, which might take a few minutes.
 3. ### Start PGVector Database
    ```bash
    docker-compose up -d
+   
    This will start a PostgreSQL database with PGVector extension on port 5432.
 4. ### Build the Application
    ```bash
@@ -47,10 +49,11 @@ This project demonstrates the implementation of Retrieval Augmented Generation (
 ### Running the Application
 
 1. Start the Spring Boot Application
+   
    ```bash
    ./mvnw spring-boot:run
    
-2. The application will automatically:
+3. The application will automatically:
    - Initialize the vector store schema
    - Load and process the Spring Boot reference PDF
    - Start the REST API server
@@ -62,6 +65,7 @@ Send questions about Spring Boot to the API endpoint:
 curl -X POST http://localhost:8080/api/chat \
      -H "Content-Type: text/plain" \
      -d "What is Spring Boot?"
+
 
 ### Project Structure
 
