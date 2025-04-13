@@ -19,7 +19,6 @@ This project demonstrates the implementation of Retrieval Augmented Generation (
 ### Document Ingestion Pipeline
 
 ![document_ingestion_pipeline](https://github.com/user-attachments/assets/9d46fc2b-a1cc-418a-9852-d1bf25674db0)
-
 ### Prerequisites
 
 - Java 21
@@ -35,12 +34,12 @@ This project demonstrates the implementation of Retrieval Augmented Generation (
 2. ### Pull the Mistral Model
    ```bash
    ollama pull mistral
-   
+   ```
    Note: If you skip this step, the application will automatically pull the model when it first starts, which might take a few minutes.
 3. ### Start PGVector Database
    ```bash
    docker-compose up -d
-   
+   ```
    This will start a PostgreSQL database with PGVector extension on port 5432.
 4. ### Build the Application
    ```bash
@@ -65,7 +64,7 @@ Send questions about Spring Boot to the API endpoint:
 curl -X POST http://localhost:8080/api/chat \
      -H "Content-Type: text/plain" \
      -d "What is Spring Boot?"
-
+```
 
 ### Project Structure
 
